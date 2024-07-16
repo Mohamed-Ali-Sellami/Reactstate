@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Cercle from './cercle.js'
+import { useState } from 'react';
 function App() {
-  return (
+const couleurs=["#61dafb", "#7FFF00","#8B008B","#B22222","#00FF00"]
+const [show,setshow]=useState(false)
+  
+
+return (
+    <div className='box-content'>
+      <button onClick={()=>setshow(!show)} >show more</button>  
+    {show?(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {couleurs.map((el) => <Cercle  data={el} /> )}
+<Cercle/>
+    </div>):null}
+
+
     </div>
   );
 }

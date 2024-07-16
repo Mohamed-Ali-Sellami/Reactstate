@@ -24,8 +24,14 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  align-items:center ;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 25px;
 }
 
 @keyframes App-logo-spin {
